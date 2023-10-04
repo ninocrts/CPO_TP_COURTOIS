@@ -5,6 +5,7 @@
 
 package com.mycompany.tp1_manipnombresint_courtois;
 
+import java.util.Random;
 import java.util.Scanner;
 
 
@@ -32,7 +33,9 @@ public class TP1_manipNombresint_COURTOIS {
         System.out.println(entier1%entier2);
          */
         // SYSTEME DE TEMPERATURE
+      
         
+     /*
      //1
       Scanner sc;  
      sc = new Scanner(System.in);
@@ -45,7 +48,14 @@ public class TP1_manipNombresint_COURTOIS {
      System.out.println(valeur2);
      //3
      
-     
+     */
+        
+        
+     //3 GUESS MY NUMBER
+        
+      Random generateurAleat = new Random();
+      
+
       
       
       
