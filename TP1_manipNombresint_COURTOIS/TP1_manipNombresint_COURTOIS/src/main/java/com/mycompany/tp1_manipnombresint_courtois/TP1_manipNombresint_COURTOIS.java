@@ -16,14 +16,6 @@ public class TP1_manipNombresint_COURTOIS {
         //SAISIE ET MANIPULATION DES NOMBRES
         //1
         /*
-        int entier1;
-        int entier2;
-        Scanner sc;
-        sc = new Scanner(System.in);
-        System.out.println("Quels est la valeur du premier nombre entier?");
-        entier1 = sc.nextInt();
-        System.out.println("Quels est la valeur du deuxième nombre entier?");
-        entier2 = sc.nextInt();
         //2
         System.out.println(entier1 + entier2);
         System.out.println(entier1-entier2);
@@ -54,8 +46,64 @@ public class TP1_manipNombresint_COURTOIS {
      //3 GUESS MY NUMBER
         
       Random generateurAleat = new Random();
+      /*
+      for (int i = 0; i < 5; i++ )
+      {
+          int n = generateurAleat.nextInt(101);
+          System.out.println(n);
+      }
+      */
+      /*
+      int n = generateurAleat.nextInt(101);
+      Scanner sc;
+      sc = new Scanner(System.in);
+      System.out.println("saisissez un nombre");
+      int entier;
+      entier = sc.nextInt();
+      int compteur = 0;
       
-
+      while (entier != n)
+      {
+      compteur++;
+      System.out.println("tentatives :" + compteur);
+      if (n > entier)
+      {
+          System.out.println("trop petit");
+      }
+      else {
+          System.out.println("trop grand");
+      }
+      System.out.println("saisissez un nombre");
+      entier = sc.nextInt();
+      }
+       
+      */
+      // STATISTIQUES
+      
+      int[] tab = new int[6];
+      
+      Random random = new random;
+      for (int i = 0; i < m; i++)
+      {
+          
+      }
+       Scanner sc;
+      sc = new Scanner(System.in);
+      System.out.println("saisissez un nombre");
+      int m;
+      m = sc.nextInt();
+       
+       
+       
+       
+       
+       
+      }
+      
+      
+              
+              
+        
       
       
       
