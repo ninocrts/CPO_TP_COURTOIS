@@ -80,18 +80,21 @@ public class TP1_manipNombresint_COURTOIS {
       */
       // STATISTIQUES
       
+      Scanner sc;
       int[] tab = new int[6];
+      int m;
+      int entier = sc.nextInt();
       
       Random random = new random;
       for (int i = 0; i < m; i++)
       {
-          
+       int randomIndex = random.nextInt();
+       tab[randomIndex]++;
       }
-       Scanner sc;
+      
       sc = new Scanner(System.in);
       System.out.println("saisissez un nombre");
-      int m;
-      m = sc.nextInt();
+      
        
        
        
@@ -108,4 +111,4 @@ public class TP1_manipNombresint_COURTOIS {
       
       
     }
-}
+
