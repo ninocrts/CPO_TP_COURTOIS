@@ -8,23 +8,30 @@ package com.mycompany.tp2_bieres_courtois;
 
 
 public class TP2_Bieres_COURTOIS {
-
+    
     public static void main(String[] args) {
-      
-  BouteilleBiere uneBiere = new BouteilleBiere() ;
+        
+        
+    // PREMIERE PARTIE DU TP
+    /*BouteilleBiere uneBiere = new BouteilleBiere();
+    uneBiere.nom = "Cuvée des trolls";
+    uneBiere.degreAlcool = 7.0 ;
+    uneBiere.brasserie = "Dubuisson";
+    uneBiere.ouverte = false;
+    uneBiere.lireEtiquette();
 
+    BouteilleBiere Biere2 = new BouteilleBiere ();
+    Biere2.nom = "Leffe";
+    Biere2.degreAlcool = 6.6;
+    Biere2.brasserie = "Abbaye de Leffe";
+    Biere2.lireEtiquette();
+*/
+    //DEUXIEME PARTIE DU TP
+    BouteilleBiere uneBiere = new BouteilleBiere("Cuvée des trolls",
+    7 ,"Dubuisson") ;
+    uneBiere.lireEtiquette();
+    
+    BouteilleBiere Biere2 = new BouteilleBiere("Amsterdamer", 11, "Brasserie Clément") ;
+    Biere2.lireEtiquette();
 }
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    }
 }
