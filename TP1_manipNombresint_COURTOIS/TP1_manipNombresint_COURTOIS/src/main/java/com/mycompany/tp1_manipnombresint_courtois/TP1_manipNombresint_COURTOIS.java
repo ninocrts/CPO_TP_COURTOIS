@@ -45,7 +45,7 @@ public class TP1_manipNombresint_COURTOIS {
         
      //3 GUESS MY NUMBER
         
-      Random generateurAleat = new Random();
+     // Random generateurAleat = new Random();
       /*
       for (int i = 0; i < 5; i++ )
       {
@@ -85,7 +85,7 @@ public class TP1_manipNombresint_COURTOIS {
       int m;
       int entier = sc.nextInt();
       
-      Random random = new random;
+      Random random = new random();
       for (int i = 0; i < m; i++)
       {
        int randomIndex = random.nextInt();
