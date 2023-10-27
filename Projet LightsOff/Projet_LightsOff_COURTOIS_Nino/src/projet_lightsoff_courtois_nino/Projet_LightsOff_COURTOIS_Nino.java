@@ -14,7 +14,10 @@ public class Projet_LightsOff_COURTOIS_Nino {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+    CelluleLumineuse CelluleTest = new CelluleLumineuse();
+    CelluleTest.GetEtat();
+    CelluleTest.ActiverCellule();
+    CelluleTest.GetEtat();
     }
     
 }
