@@ -12,11 +12,7 @@ public class TP2_Convertisseur_COURTOIS {
         
     }
     
-        
-    public String toString () {
-    return "nb de conversions"+ nbConversions;
-        
-    }
+  
     
 }
       
