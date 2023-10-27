@@ -30,8 +30,21 @@ public class TP2_Bieres_COURTOIS {
     BouteilleBiere uneBiere = new BouteilleBiere("Cuvée des trolls",
     7 ,"Dubuisson") ;
     uneBiere.lireEtiquette();
-    
-    BouteilleBiere Biere2 = new BouteilleBiere("Amsterdamer", 11, "Brasserie Clément") ;
+ /*   
+    BouteilleBiere Biere2 = new BouteilleBiere("Amsterdamer",
+    11, "Brasserie Clément") ;
     Biere2.lireEtiquette();
+    
+    Biere2.ouverte = true;
+    
+    System.out.println(Biere2);
+*/
+ 
+ 
+ 
+
+ 
+ 
+ 
 }
 }
