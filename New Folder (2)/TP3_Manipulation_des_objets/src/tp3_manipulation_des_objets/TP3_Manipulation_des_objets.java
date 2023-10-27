@@ -4,17 +4,14 @@
  */
 package tp3_manipulation_des_objets;
 
-/**
- *
- * @author utilisateur
- */
+
 public class TP3_Manipulation_des_objets {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Tartiflette assiette1 = new Tartiflette(500) ;
+        Tartiflette assiette2 = new Tartiflette(600) ;
+
     }
     
 }
