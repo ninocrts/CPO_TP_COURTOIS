@@ -29,8 +29,8 @@ else {
     EstAllumee = false;
     }
 
-    public void EstEteint(){
-    
+    public boolean EstEteint(){
+    return !(EstAllumee);
 }
     public void GetEtat() {
     if (EstAllumee == true) {
