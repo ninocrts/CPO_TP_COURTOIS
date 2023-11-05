@@ -10,35 +10,30 @@ package projet_lightsoff_courtois_nino;
  */
 public class CelluleLumineuse {  
     
-boolean EstAllumee;
+boolean etat;
 
 public CelluleLumineuse () {
-    EstAllumee = false;
+    etat = false;
 }
 
 public void ActiverCellule(){
-if (EstAllumee == true){
-    EstAllumee = false;
+if (etat == true){
+    etat = false;
 }
 else {
-    EstAllumee = true;
+    etat = true;
 }
 }
 
     public void EteindreCellule(){
-    EstAllumee = false;
+    etat = false;
     }
 
     public boolean EstEteint(){
-    return !(EstAllumee);
+    return !(etat);
 }
-    public void GetEtat() {
-    if (EstAllumee == true) {
-        System.out.println("X");
-    }
-    else{
-        System.out.println("O");
-    }
+    public boolean GetEtat() {
+   return etat;
 }
 }
 
