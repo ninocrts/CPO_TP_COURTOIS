@@ -17,7 +17,10 @@ public class Projet_LightsOff_COURTOIS_Nino {
     CelluleLumineuse CelluleTest = new CelluleLumineuse();
     CelluleTest.GetEtat();
     CelluleTest.ActiverCellule();
-    CelluleTest.GetEtat();
+    CelluleTest.GetEtat();  
+    GrilleDeJeu GrilleTest = new GrilleDeJeu(10,10);
+    GrilleTest.eteindreToutesLesCellules();
+    GrilleTest.toString();
     }
-    
-}
+    }
+
