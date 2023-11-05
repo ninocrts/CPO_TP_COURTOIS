@@ -10,5 +10,19 @@ package projet_lightsoff_courtois_nino;
  * @author utilisateur
  */
 public class Partie {
+    int nbCoups;
+    public Partie(int nbCoups){
+    nbCoups = 0;
+    }
+public void initialiserPartie(){
     
+}
+
+public void lancerPartie(){
+    
+}
+
+
+
+
 }
