@@ -34,6 +34,6 @@ else {
 }
     public boolean GetEtat() {
    return etat;
-   }
+}
 }
 
