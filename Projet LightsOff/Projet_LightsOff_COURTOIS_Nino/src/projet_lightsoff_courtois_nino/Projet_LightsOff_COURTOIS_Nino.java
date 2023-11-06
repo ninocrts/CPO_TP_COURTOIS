@@ -25,6 +25,10 @@ public class Projet_LightsOff_COURTOIS_Nino {
     GrilleTest.melangerMatriceAleatoirement(2);
     System.out.println(GrilleTest);
         */
+        
+    Partie PartieNino = new Partie();
+    PartieNino.initialiserPartie();
+    PartieNino.lancerPartie();
     }
     }
 

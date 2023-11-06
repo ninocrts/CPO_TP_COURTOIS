@@ -33,7 +33,31 @@ else {
     return !(etat);
 }
     public boolean GetEtat() {
-   return etat;
+    return etat;
+    }
+   
+    @Override
+
+    public String toString() {
+
+        if (etat == true) {
+
+            return "X";
+
+        } else if (etat == false) {
+
+ 
+
+            return "O";
+
+        }
+
+        return null;
+
+    }
+
 }
-}
+     
+
+
 
