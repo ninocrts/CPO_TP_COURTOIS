@@ -20,7 +20,7 @@ public class Projet_LightsOff_COURTOIS_Nino {
     CelluleTest.GetEtat();  
     GrilleDeJeu GrilleTest = new GrilleDeJeu(10,10);
     GrilleTest.eteindreToutesLesCellules();
-    GrilleTest.toString();
+    System.out.println(GrilleTest);
     }
     }
 
