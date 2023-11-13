@@ -22,9 +22,9 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     int nbCoups;
     int i;
     GrilleDeJeu grille;
+    GrilleDeJeu unegrille;
 
     public FenetrePrincipale(GrilleDeJeu unegrille, int nbCoup) {
-        grille = unegrille;
         initComponents();
         int nbLignes = 10;
         int nbColonnes = 10;
@@ -40,8 +40,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
             }
         }
 
-        PanneauBoutonsVerticaux.setLayout(new GridLayout(nbLignes, 1));
-        getContentPane().add(PanneauBoutonsVerticaux, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 1 * 40, nbLignes * 40));
+        PanneauBouttonsVerticaux.setLayout(new GridLayout(nbLignes, 1));
+        getContentPane().add(PanneauBouttonsVerticaux, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 1 * 40, nbLignes * 40));
         this.pack();
         this.revalidate();
 
@@ -59,7 +59,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
             };
 
             bouton_ligne.addActionListener(ecouteurClick);
-            PanneauBoutonsVerticaux.add(bouton_ligne);
+            PanneauBouttonsVerticaux.add(bouton_ligne);
 
         }
 
@@ -127,7 +127,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         }
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-        new FenetrePrincipale(unegrille, nbCoups).setVisible(true);
+        new FenetrePrincipale(grille, );
         });
     }
 
