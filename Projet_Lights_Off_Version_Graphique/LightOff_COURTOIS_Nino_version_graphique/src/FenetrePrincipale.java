@@ -1,7 +1,9 @@
+
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -127,8 +129,12 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         }
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-        new FenetrePrincipale();
+        //new FenetrePrincipale();
         });
+        
+        Partie PartieNino = new Partie();
+        PartieNino.initialiserPartie();
+        PartieNino.lancerPartie();
     }
 
 
