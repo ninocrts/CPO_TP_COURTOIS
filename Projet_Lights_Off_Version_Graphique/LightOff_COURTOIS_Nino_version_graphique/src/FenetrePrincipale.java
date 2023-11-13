@@ -3,8 +3,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
-
-
+import Partie.java;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -26,15 +25,15 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
     public FenetrePrincipale() {
 
+        initComponents();
+
         int nbLignes = 10;
         int nbColonnes = 10;
 
         PanneauBoutonsVerticaux.setLayout(new GridLayout(nbLignes, 1));
-        getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 1 * 40, nbLignes * 40));
+        getContentPane().add(PanneauBoutonsVerticaux, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 1 * 40, nbLignes * 40));
         this.pack();
         this.revalidate();
-
-        initComponents();
 
         this.grille = new GrilleDeJeu(nbLignes, nbColonnes);
         PanneauGrille.setLayout(new GridLayout(nbLignes, nbColonnes));
@@ -43,35 +42,32 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 //JButton bouton_cellule = new JButton(); // création d'un bouton
                 CelluleGraphique bouton_cellule = new CelluleGraphique(grille.matriceCellules[i][j], 36, 36);
                 PanneauGrille.add(bouton_cellule); // ajout au Jpanel PanneauGrille
-            
+
             }
         }
-                
-                PanneauBoutonsVerticaux.setLayout(new GridLayout(nbLignes, 1));
-                getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 1 * 40, nbLignes * 40));
-                this.pack();
-                this.revalidate();
 
-                // création du panneau de boutons verticaux (pour les lignes)
-                for (i = 0; i < nbLignes; i++) {
-                    JButton bouton_ligne = new JButton();
-                    ActionListener ecouteurClick = new ActionListener() {
-                        final int j = i;
+        PanneauBoutonsVerticaux.setLayout(new GridLayout(nbLignes, 1));
+        getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 1 * 40, nbLignes * 40));
+        this.pack();
+        this.revalidate();
 
-                        @Override
-                        public void actionPerformed(ActionEvent e) {
-                            grille.activerLigneDeCellules(j);
-                            repaint();
-                        }
-                    };
+        // création du panneau de boutons verticaux (pour les lignes)
+        for (i = 0; i < nbLignes; i++) {
+            JButton bouton_ligne = new JButton();
+            ActionListener ecouteurClick = new ActionListener() {
+                final int j = i;
 
-                    bouton_ligne.addActionListener(ecouteurClick);
-                    PanneauBoutonsVerticaux.add(bouton_ligne);
-
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    grille.activerLigneDeCellules(j);
+                    repaint();
                 }
+            };
 
-            
-        
+            bouton_ligne.addActionListener(ecouteurClick);
+            PanneauBoutonsVerticaux.add(bouton_ligne);
+
+        }
 
     }
 
@@ -80,26 +76,41 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     private void initComponents() {
 
         PanneauGrille = new javax.swing.JPanel();
+        PanneauBouttonsVerticaux = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PanneauGrille.setBackground(new java.awt.Color(0, 255, 204));
-        PanneauGrille.setMaximumSize(new java.awt.Dimension(360, 360));
-        PanneauGrille.setPreferredSize(new java.awt.Dimension(360, 360));
+        PanneauGrille.setBackground(new java.awt.Color(255, 0, 51));
+        PanneauGrille.setPreferredSize(new java.awt.Dimension(400, 400));
 
         javax.swing.GroupLayout PanneauGrilleLayout = new javax.swing.GroupLayout(PanneauGrille);
         PanneauGrille.setLayout(PanneauGrilleLayout);
         PanneauGrilleLayout.setHorizontalGroup(
             PanneauGrilleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         PanneauGrilleLayout.setVerticalGroup(
             PanneauGrilleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 400, Short.MAX_VALUE)
         );
 
-        getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 400));
+        getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, -1, -1));
+
+        PanneauBouttonsVerticaux.setBackground(new java.awt.Color(0, 0, 0));
+
+        javax.swing.GroupLayout PanneauBouttonsVerticauxLayout = new javax.swing.GroupLayout(PanneauBouttonsVerticaux);
+        PanneauBouttonsVerticaux.setLayout(PanneauBouttonsVerticauxLayout);
+        PanneauBouttonsVerticauxLayout.setHorizontalGroup(
+            PanneauBouttonsVerticauxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        PanneauBouttonsVerticauxLayout.setVerticalGroup(
+            PanneauBouttonsVerticauxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(PanneauBouttonsVerticaux, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -134,8 +145,14 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         });
     }
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PanneauBouttonsVerticaux;
     private javax.swing.JPanel PanneauGrille;
     // End of variables declaration//GEN-END:variables
 
+    
+    
 }
+
+
